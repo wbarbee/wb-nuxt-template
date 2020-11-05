@@ -1,0 +1,139 @@
+// * * binded style variables * *
+// --options-height --> dynamic options menu height
+// --option-height --> dynamic single option item height
+// --dropdown-width --> dynamic dropdown & options drawer width
+
+// * * * Variables * * *
+// $default-border-radius: 4px;
+$default-text-hover-color: white;
+$default-hover-color: crimson;
+$default-text-color: #fff;
+$option-padding: 5px 20px;
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20em;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--dropdown-default-text-color);
+  background: transparent;
+  user-select: none;
+  transition: all 0.7s linear;
+  .dropdown-label-container {
+    display: flex;
+    width: 100%;
+    .dropdown-label {
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 auto;
+      align-items: center;
+      height: var(--option-height);
+      padding: $option-padding;
+      .text {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: 75%;
+        margin-top: 3px;
+        transition: 0.5s;
+        animation: 0.4s fadeIn linear;
+        color: dimgrey;
+      }
+      .angle-down {
+        border: solid $default-text-color;
+        background: transparent;
+        border-width: 0 2px 2px 0;
+        padding: 4px;
+        width: 1px;
+        height: 1px;
+        border-color: var(--dropdown-default-text-color);
+        transform: rotate(45deg);
+        transition: all 0.7s;
+        position: absolute;
+        right: 1em;
+      }
+      .toggled {
+        margin-bottom: -5px;
+        transform: rotate(-135deg);
+        transition: all 0.7s;
+      }
+    }
+  }
+
+  .options {
+    width: 100%;
+    height: auto !important;
+    .option {
+      display: flex;
+      align-items: center;
+      padding: $option-padding;
+      height: 45px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+    }
+    .option:hover {
+      color: $default-text-hover-color;
+      background: $default-hover-color;
+      transition: all 0.7s;
+    }
+    .option:last-child {
+      border-radius: 0;
+    }
+    .option:last-child:hover {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+}
+.dropdown.expanded {
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.7s linear;
+}
+
+// Expand Class - Most important part
+.expand {
+  &.expanded {
+    box-shadow: 0px 2px 13px 2px rgba(0, 0, 0, 0.21);
+  }
+  overflow: hidden;
+  background-color: white;
+  transition-property: height;
+  transition-duration: 0.4s; // Durations can be changed without touching JS
+  transition-timing-function: cubic-bezier(
+    0.175,
+    0.885,
+    0.32,
+    1.275
+  ); // Timing functions also!
+
+  &[aria-expanded='false'] {
+    height: 0 !important;
+    transition-timing-function: cubic-bezier(
+      0.6,
+      -0.28,
+      0.735,
+      0.045
+    ); // Timing function can be different for each direction
+  }
+}
+
+// Smartphones - Landscape + Portrait
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    max-width: 15em;
+    background-color: transparent;
+  }
+
+  .text {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Default Site Name",
+  "short_name": "First Last",
+  "apple-mobile-web-app-title": "Default App Title",
+  "description": "Default app desciription",
+  "icons": [
+    {
+      "src": "/196x196_icon.png",
+      "type": "image/png",
+      "sizes": "196x196",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/512x512_icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": ".",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "theme_color": "#FFFFFF"
+}
