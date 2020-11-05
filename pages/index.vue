@@ -15,7 +15,7 @@
           Nuxt.js Documentation
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/wbarbee/wb-nuxt-template"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
