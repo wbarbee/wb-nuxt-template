@@ -1,3 +1,5 @@
+<img src="https://github.com/wbarbee/wb-nuxt-template/blob/main/assets/images/main_logo.svg" alt="drawing" width="150"/>
+
 # wb-nuxt-template
 
 ## Build Setup
