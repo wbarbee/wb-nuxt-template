@@ -31,7 +31,7 @@ export default {
       },
       {
         property: 'og:title',
-        content: 'Stan Burnside',
+        content: constants.SITE_TITLE,
       },
       {
         property: 'og:image',
