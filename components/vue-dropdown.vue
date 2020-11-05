@@ -7,7 +7,7 @@
   >
     <div class="dropdown-label-container">
       <div class="dropdown-label">
-        <span class="text animated" v-if="!isExpanded">More</span>
+        <span class="text animated" v-if="!isExpanded"></span>
         <i class="angle-down" :class="{ toggled: isExpanded }"></i>
       </div>
     </div>

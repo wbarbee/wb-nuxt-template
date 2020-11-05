@@ -85,7 +85,7 @@ export default {}
   display: block;
   margin: 2em auto 1.5em;
   width: 95%;
-  max-width: 10em;
+  max-width: 12em;
   transition: 0.25s ease-in-out;
   &:hover {
     cursor: pointer;
@@ -106,7 +106,7 @@ export default {}
   display: block;
   margin: 1em auto;
   width: 95%;
-  max-width: 10em;
+  max-width: 12em;
   transition: 0.25s ease-in-out;
   &:hover {
     cursor: pointer;

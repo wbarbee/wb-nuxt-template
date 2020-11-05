@@ -1,12 +1,12 @@
 <template>
-    <div class="about-wrapper view-page">
-        ABOUT
+    <div class="contact-wrapper view-page">
+        GDPR
     </div>
 </template>
 
 <script>
 export default {
-    name: 'About'
+    name: 'GDPR'
 }
 </script>
 
